@@ -21,31 +21,31 @@ namespace Task_402
                 double[] B = new double[n];
                 double[] C = new double[n];
 
-                Console.WriteLine("Enter amout of rain for A");
+                Console.WriteLine("Enter amount of rain for A");
                 FillData(A, n);
 
-                Console.WriteLine("Enter amout of rain for B");
+                Console.WriteLine("Enter amount of rain for B");
                 FillData(B, n);
 
-                Console.WriteLine("Enter amout of rain for C");
+                Console.WriteLine("Enter amount of rain for C");
                 FillData(C, n);
 
                 double minA = FindMin(A);
-                Console.WriteLine($"Minimal amout of rain for A: {minA} ");
+                Console.WriteLine($"Minimal amount of rain for A: {minA} ");
 
                 double minB = FindMin(B);
-                Console.WriteLine($"Minimal amout of rain for B: {minB} ");
+                Console.WriteLine($"Minimal amount of rain for B: {minB} ");
 
                 double minC = FindMin(C);
-                Console.WriteLine($"Minimal amout of rain for C: {minC} ");
+                Console.WriteLine($"Minimal amount of rain for C: {minC} ");
 
-                Console.WriteLine("Days in which the amout of rain is equal to the minimal amount of rain for A: ");
+                Console.WriteLine("Days in which the amount of rain is equal to the minimal amount of rain for A: ");
                 FindMinDays(A, minA);
 
-                Console.WriteLine("Days in which the amout of rain is equal to the minimal amount of rain for B:");
+                Console.WriteLine("Days in which the amount of rain is equal to the minimal amount of rain for B:");
                 FindMinDays(B, minB);
 
-                Console.WriteLine("Days in which the amout of rain is equal to the minimal amount of rain for C:");
+                Console.WriteLine("Days in which the amount of rain is equal to the minimal amount of rain for C:");
                 FindMinDays(C, minC);
             }
             catch (Exception ex)
