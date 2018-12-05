@@ -2,6 +2,7 @@
 
 namespace Task_35B
 {
+    // Задачата е решена правилно, но с едно методче ще изглежда по елегантно. Условие?
     class Program
     {
         static void Main(string[] args)
