@@ -2,6 +2,7 @@
 
 namespace Task_402
 {
+    // ??
     class Program
     {
         static void Main(string[] args)
