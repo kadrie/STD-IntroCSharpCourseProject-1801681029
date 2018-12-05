@@ -8,8 +8,9 @@ namespace Task_164
         {
             //There are given coordinates of a triangle. Create methods:
             //To check if triangle with the given coordinates can exist.
-            //To find triangle's area if the previous one is TRUE.
+            //To find triangle's area if the previous one is TRUE.            
 
+            // Пробвай да изкараш няколко метода от този try-catch. Аз виждам поне 3-и метода, които могат да се изведат.
             try
             {
                 Console.WriteLine("Enter Xa.");
