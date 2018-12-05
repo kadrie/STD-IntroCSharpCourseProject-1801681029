@@ -2,6 +2,7 @@
 
 namespace Task_4G
 {
+    // Условие?? Метод?
     class Program
     {
         static void Main(string[] args)
