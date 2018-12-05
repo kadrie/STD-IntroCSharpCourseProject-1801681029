@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace Task_372_AJ
 {
+    // Тия eCounter и rCounter май само ти си ги знаеш за какво са. Без условие.... Два метода също могат да бъдат изнесени.
     class Program
     {
         static void Main(string[] args)
