@@ -2,19 +2,21 @@
 
 namespace Task_209J
 {
-    // Тук могат да се направят два метода. Единия да раздава рандом числа в масив, другия да извежда резултат. 
-    // И напиши условието на задачата, за да е ясно какво се смята.
     class Program
     {
+        
         static void Main(string[] args)
         {
+            // Generate 100 random numbers [0,132] and print thoose from them:
+            //          -which doesn't belong in the interval (26,100]
             try
             {
                 Console.WriteLine("These are the numbers which are not in the interval (26,100]");
                 Console.WriteLine("------------------------------------------------------------");
+
                 Random rand = new Random();
                 int number = 0;
-                for (int i = 0; i < 132; i++)
+                for (int i = 0; i < 100; i++)
                 {
                     number = rand.Next(0, 132);
 

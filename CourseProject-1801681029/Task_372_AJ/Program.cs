@@ -3,42 +3,23 @@ using System.Linq;
 
 namespace Task_372_AJ
 {
-    // Тия eCounter и rCounter май само ти си ги знаеш за какво са. Без условие.... Два метода също могат да бъдат изнесени.
     class Program
     {
         static void Main(string[] args)
         {
+            // Elements of array are city names, starting with uppercase letter, write methods for:
+            //      -Filling the array 
+            //      -Printing the names which has 'e' or 'E' 2,3 or 4 times and 'r' doesn't exist
             try
             {
-                Console.WriteLine("Enter a few cities.");
-                string[] cities = new string[3];
-
-                for (int i = 0; i < cities.Count(); i++)
+                var cities = FillArray(3);
+                if (cities != null)
                 {
-                    Console.WriteLine($"Enter city {i + 1}");
-
-                    cities[i] = Console.ReadLine();
+                    FindNames(cities);
                 }
-
-                foreach (var city in cities)
+                else
                 {
-                    int eCounter = 0;
-                    int rCounter = 0;
-                    for (int i = 0; i < city.Length; i++)
-                    {
-                        if (city[i] == 'e' || city[i] == 'E')
-                        {
-                            eCounter++;
-                        }
-                        else if (city[i] == 'r')
-                        {
-                            rCounter++;
-                        }
-                    }
-                    if (eCounter >= 2 && eCounter <= 4 && rCounter == 0)
-                    {
-                        Console.WriteLine($"The cities, which contain 'E' or 'e' 2, 3 or 4 times and don't contain 'r' are:  {city}");
-                    }
+                    Console.WriteLine("Empty array!");
                 }
             }
             catch (Exception ex)
@@ -46,6 +27,45 @@ namespace Task_372_AJ
                 Console.WriteLine(ex.Message);
             }
 
+        }
+        private static string[] FillArray (int count)
+        {
+            Console.WriteLine("Enter a few cities.");
+            string[] cities = new string[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine($"Enter city {i + 1}");
+
+                cities[i] = Console.ReadLine();
+            }
+            return cities;
+        }
+        private static void FindNames(string[] cities)
+        {
+            foreach (var city in cities)
+            {
+                //counter for matching 'e' or 'E' characters
+                int eLetterCounter = 0;
+                //counter for matching 'r' characters
+                int rLetterCounter = 0;
+
+                for (int i = 0; i < city.Length; i++)
+                {
+                    if (city[i] == 'e' || city[i] == 'E')
+                    {
+                        eLetterCounter++;
+                    }
+                    else if (city[i] == 'r')
+                    {
+                        rLetterCounter++;
+                    }
+                }
+                if (eLetterCounter >= 2 && eLetterCounter <= 4 && rLetterCounter == 0)
+                {
+                    Console.WriteLine($"The cities, which contain 'E' or 'e' 2, 3 or 4 times and don't contain 'r' are:  {city}");
+                }
+            }
         }
     }
 }

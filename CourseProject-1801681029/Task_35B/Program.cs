@@ -2,12 +2,13 @@
 
 namespace Task_35B
 {
-    // Задачата е решена правилно, но с едно методче ще изглежда по елегантно. Условие?
     class Program
     {
         static void Main(string[] args)
         {
-            
+            // Print true or false whether or not the equation:
+            //      a*x*x + b*x + c = 0  when (a != 0) 
+            // doesn't have real roots
             try
             {
                 Console.WriteLine("Enter number for a");

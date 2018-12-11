@@ -2,15 +2,15 @@
 
 namespace Task_1_Convertion
 {
-    // Условие? И ко й туй '2029'? Яде ли се, пие ли се и защо пък да не е '2030'?
-    // Ако се повтаря няколко пъти '2029', не е ли по-удобно да е изнесено в променлива?
     class Program
     {
+        // Convert 2029 to binary, octal and heximal 
         static void Main(string[] args)
         {
-            Console.WriteLine("2029 to binary is: {0}.", Convert.ToString(2029, 2));
-            Console.WriteLine("2029 to octal is: {0}.", Convert.ToString(2029, 8));
-            Console.WriteLine("2029 to heximal is: {0}.", Convert.ToString(2029, 16));
+            int numberToConvert = 2029;
+            Console.WriteLine($"{numberToConvert} to binary is: " + Convert.ToString(numberToConvert, 2));
+            Console.WriteLine($"{numberToConvert} to octal is: " + Convert.ToString(numberToConvert, 8));
+            Console.WriteLine($"{numberToConvert} to heximal is: " + Convert.ToString(numberToConvert, 16));
         }
     }
 }
